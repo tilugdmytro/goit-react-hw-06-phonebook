@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import s from "./Contact.module.css";
 
-const Contact = ({ name, number, id, onDeleteContact }) => {
+function Contact({ name, number, id, onDeleteContact }) {
   return (
     <li className={s.item}>
       <p className={s.name}>{name}</p>
@@ -15,7 +15,7 @@ const Contact = ({ name, number, id, onDeleteContact }) => {
       </button>
     </li>
   );
-};
+}
 
 Contact.propTypes = {
   onDeleteContact: PropTypes.func.isRequired,
